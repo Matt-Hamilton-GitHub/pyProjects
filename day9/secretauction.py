@@ -1,4 +1,8 @@
 from art import logo
+import os
+
+
+
 
 def getWinner(dic):
         winner = next(iter(dic))
@@ -13,8 +17,8 @@ def auction():
     print(logo)
     print('Welcome to the secret auction program')
     
+    
     bidsDic = {}
-
     again = 'YES'
     while again == 'YES':
         username = input('What is your name ?: ')
@@ -22,8 +26,9 @@ def auction():
         bidsDic[username] = bid
 
         again = input("Are there any other bidders? Type 'yes' or 'no'. \n").upper()
-
+        os.system("cls")
     winner = getWinner(bidsDic)
-    return (winner, bidsDic[winner])
+    return f'{winner} WINS with a bid of ${bidsDic[winner]})'
 
-print(f'{auction()[0]} wins with ',)
+
+print(auction())
