@@ -49,7 +49,6 @@ while not finish:
 
 if user_bet == winner:
     print(f'You won! {winner.upper()} turtle came to the finish first')
-    
 else:
     print(f'You lost! You bet for {user_bet.upper()} but {winner.upper()} came first to the finish')
 
