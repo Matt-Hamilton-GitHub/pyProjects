@@ -12,11 +12,9 @@ screen.tracer(0)
 game = Pong(WIDTH, HEIGHT)
 
 def move_up():
-    print('up')
     game.update_position(25)
 
 def move_down():
-    print('down')
     game.update_position(-25)
 
 GAME_OVER = False
