@@ -14,7 +14,7 @@ class TurtleCrossing(Turtle):
 
         self.place_car()
        
-    def place_car(self, h, w):
+    def place_car(self):
     
         time.sleep(r.randint(0,5)* 0.1)
         new_car = Car(r.randint(1,4))
@@ -22,7 +22,7 @@ class TurtleCrossing(Turtle):
         new_car.shape('square')
         new_car.ht()
         new_car.penup()
-        new_car.setposition(w, h)
+        new_car.setposition(self.width , self.height / 20 * r.randint(1, self.height / 40))
         new_car.st()
         new_car.speed(r.randint(0,2))
         self.CARS.append(new_car)
@@ -40,7 +40,7 @@ class TurtleCrossing(Turtle):
                 i.clear()
 
         for i in range(len(self.CARS), 4):
-            self.place_car()
+            self.place_car() 
             
 
 
