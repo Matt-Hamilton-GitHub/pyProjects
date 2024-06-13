@@ -94,12 +94,12 @@ class Pong:
         if p[1] >= self.height:
             self.move_tiles_y = r.randint(10,25)
             self.move_tiles_y = -abs(self.move_tiles_y)
-            print('bounced')
+            
         
         elif abs(p[1]) >= abs(self.height):  
             self.move_tiles_y = r.randint(10,25)
             self.move_tiles_y = abs(self.move_tiles_y)
-            print('bounced')
+           
         
     def reset(self, p, a):
         self.pong.setposition(p)
