@@ -55,9 +55,8 @@ all_movies = [t.text for t in soup.find_all('h3', class_='title')]
 all_movies = all_movies[::-1]
 with open('movies.txt','w',encoding='UTF8') as file:
 
-
     for m in all_movies:
-        file.write(m+'\n')
-        print(m)
+        file.write(m + '\n')
+  
 
 file.close()
